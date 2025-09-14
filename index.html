@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Flow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Word Flow</h1>
+            <p>Connect the words by filling in the missing links!</p>
+        </header>
+        
+        <div class="puzzle-container">
+            <div id="word-chain" class="word-chain">
+                <!-- Words will be dynamically generated here -->
+            </div>
+        </div>
+        
+
+        
+        <div class="game-info">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="current-word">Current Word: <span id="current-word">Select a blank to start</span></div>
+        </div>
+        
+        <div id="input-section" class="input-section hidden">
+            <input type="text" id="word-guess" class="word-guess" placeholder="Enter your guess..." maxlength="20">
+            <button id="submit-guess" class="btn">Submit Guess</button>
+        </div>
+        
+        <div id="win-message" class="win-message hidden">
+            <h2>Congratulations!</h2>
+            <p>You've completed the word chain!</p>
+            <button id="play-again-btn" class="btn">Play Again</button>
+        </div>
+    </div>
+    
+    <script src="word-pairs.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
